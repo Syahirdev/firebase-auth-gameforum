@@ -1,3 +1,10 @@
+//get data-------------------------------------------------------------
+db.collection("topics")
+	.get()
+	.then((snapshot) => {
+		setupTopics(snapshot.docs);
+	});
+
 //listen for auth status changes---------------------------------------
 auth.onAuthStateChanged((user) => {
 	if (user) {
