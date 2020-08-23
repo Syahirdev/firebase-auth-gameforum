@@ -122,6 +122,26 @@
 			</ul>
 		</div>
 
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     	https://firebase.google.com/docs/web/setup#available-libraries -->
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyAHu-pQmMVQdIW8EYwTkJVZAYGGpmaZSa8",
+				authDomain: "gameforum-ec26f.firebaseapp.com",
+				databaseURL: "https://gameforum-ec26f.firebaseio.com",
+				projectId: "gameforum-ec26f",
+				storageBucket: "gameforum-ec26f.appspot.com",
+				messagingSenderId: "778330301982",
+				appId: "1:778330301982:web:da60890acbf6e0ec44300f",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="scripts/auth.js"></script>
