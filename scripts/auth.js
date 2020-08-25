@@ -1,6 +1,7 @@
 //listen for auth status changes---------------------------------------
 auth.onAuthStateChanged((user) => {
 	if (user) {
+		setupUI(user);
 		//get data-------------------------------------------------------------
 		db.collection("topics")
 			.get()
@@ -8,6 +9,7 @@ auth.onAuthStateChanged((user) => {
 				setupTopics(snapshot.docs);
 			});
 	} else {
+		setupUI();
 		console.log("User Logged Out...");
 		setupTopics([]);
 	}
