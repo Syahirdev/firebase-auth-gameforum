@@ -1,16 +1,15 @@
-//get data-------------------------------------------------------------
-db.collection("topics")
-	.get()
-	.then((snapshot) => {
-		setupTopics(snapshot.docs);
-	});
-
 //listen for auth status changes---------------------------------------
 auth.onAuthStateChanged((user) => {
 	if (user) {
-		console.log("User Logged In: ", user);
+		//get data-------------------------------------------------------------
+		db.collection("topics")
+			.get()
+			.then((snapshot) => {
+				setupTopics(snapshot.docs);
+			});
 	} else {
 		console.log("User Logged Out...");
+		setupTopics([]);
 	}
 });
 
